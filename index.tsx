@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-import Hello from "./components/Hello";
 import WithInputParameters from "./components/WithInputParameters";
+import Forms from "./components/Forms";
 import "./style.css";
 
 interface AppProps {}
@@ -21,7 +21,7 @@ class App extends Component<AppProps, AppState> {
     return (
       <div>
         {/*<WithInputParameters />*/}
-        <WithInputParameters />
+        <Forms />
       </div>
     );
   }

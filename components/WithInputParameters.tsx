@@ -1,26 +1,38 @@
 import React, { Component } from "react";
 
+class LifeCycleComponent extends Component {
+  componentWillMount() {
+    console.log("componentWillMount");
+  }
+}
+
 class Parent extends Component {
-	render() {
-		return (
-				<div>
+  render() {
+    const child1 = { name: "Child one", number: 1 };
+    const child2 = { name: "Child two", number: 2 };
+    return (
+      <div>
         <h1>Parent</h1>
         <ul>
           <li>
-            <Child number="1" />
+            <Child childData={child1} />
           </li>
           <li>
-            <Child number="2" />
+            <Child childData={child2} />
           </li>
         </ul>
       </div>
     );
-	}
+  }
 }
 class Child extends Component {
-	render() {
-		return <p>Child {this.props.number}</p>;
-	}
+  render() {
+    return (
+      <p>
+        Child {this.props.childData.number} ({this.props.childData.name})
+      </p>
+    );
+  }
 }
 
 export default Parent;

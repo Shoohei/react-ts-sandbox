@@ -20,9 +20,8 @@ class App extends Component<AppProps, AppState> {
   render() {
     return (
       <div>
+        {/*<WithInputParameters />*/}
         <WithInputParameters />
-        <Hello name={this.state.name} />
-        <p>Start editing to see some magic happen :)</p>
       </div>
     );
   }

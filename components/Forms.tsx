@@ -18,8 +18,25 @@ class Forms extends LifeCycleComponent {
   render() {
     return (
       <div>
-        <input type = "text" value = {this.state.data} onChange = {this.updateState} />
-        <p>{this.state.data}</p>
+        <Content
+          myDataProp={this.state.data}
+          updateStateProp={this.updateState}
+        />
+      </div>
+    );
+  }
+}
+
+class Content extends LifeCycleComponent {
+  render() {
+    return (
+      <div>
+        <input
+          type="text"
+          value={this.props.myDataProp}
+          onChange={this.props.updateStateProp}
+        />
+        <p>{this.props.myDataProp}</p>
       </div>
     );
   }

@@ -1,23 +1,54 @@
 import { Component } from "react";
+import moment from "moment";
 
 class LifeCycleComponent extends Component {
-  componentWillMount() {
-    console.log(this.constructor.name + ": componentWillMount");
+  UNSAFE_componentWillMount() {
+    console.log(
+      moment().format("HH:mm:ss.SSS") +
+        ": " +
+        this.constructor.name +
+        ": componentWillMount"
+    );
   }
   componentDidMount() {
-    console.log(this.constructor.name + ": componentDidMount");
+    console.log(
+      moment().format("HH:mm:ss.SSS") +
+        ": " +
+        this.constructor.name +
+        ": componentDidMount"
+    );
   }
-  componentWillReceiveProps() {
-    console.log(this.constructor.name + ": componentWillReceiveProps");
+  UNSAFE_componentWillReceiveProps() {
+    console.log(
+      moment().format("HH:mm:ss.SSS") +
+        ": " +
+        this.constructor.name +
+        ": componentWillReceiveProps"
+    );
   }
-  componentWillUpdate() {
-    console.log(this.constructor.name + ": componentWillUpdate");
+  UNSAFE_componentWillUpdate() {
+    console.log(
+      moment().format("HH:mm:ss.SSS") +
+        ": " +
+        this.constructor.name +
+        ": componentWillUpdate"
+    );
   }
   componentDidUpdate() {
-    console.log(this.constructor.name + ": componentDidUpdate");
+    console.log(
+      moment().format("HH:mm:ss.SSS") +
+        ": " +
+        this.constructor.name +
+        ": componentDidUpdate"
+    );
   }
   componentWillUnmount() {
-    console.log(this.constructor.name + ": componentWillUnmount");
+    console.log(
+      moment().format("HH:mm:ss.SSS") +
+        ": " +
+        this.constructor.name +
+        ": componentWillUnmount"
+    );
   }
 }
 

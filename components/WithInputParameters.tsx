@@ -1,5 +1,10 @@
 import React, { Component } from "react";
-import LifeCycleComponent from "../utility/LifeCycleComponent";
+
+class LifeCycleComponent extends Component {
+  componentWillMount() {
+    console.log("componentWillMount");
+  }
+}
 
 class Parent extends LifeCycleComponent {
   render() {

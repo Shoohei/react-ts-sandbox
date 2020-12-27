@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 import Hello from "./components/Hello";
-import ExternalHeader from "./components/ExternalHeader";
+import WithInputParameters from "./components/WithInputParameters";
 import "./style.css";
 
 interface AppProps {}
@@ -20,7 +20,7 @@ class App extends Component<AppProps, AppState> {
   render() {
     return (
       <div>
-        <ExternalHeader />
+        <WithInputParameters />
         <Hello name={this.state.name} />
         <p>Start editing to see some magic happen :)</p>
       </div>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 import Hello from "./components/Hello";
+import ExternalHeader from "./components/ExternalHeader";
 import "./style.css";
 
 interface AppProps {}
@@ -19,6 +20,7 @@ class App extends Component<AppProps, AppState> {
   render() {
     return (
       <div>
+        <ExternalHeader />
         <Hello name={this.state.name} />
         <p>Start editing to see some magic happen :)</p>
       </div>

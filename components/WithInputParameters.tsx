@@ -1,5 +1,5 @@
 import React from "react";
-import LifeCycleComponent from "./LifeCycleComponent";
+import LifeCycleComponent from "../utilities/LifeCycleComponent";
 
 class Parent extends LifeCycleComponent {
   render() {

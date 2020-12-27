@@ -21,6 +21,7 @@ class App extends Component<AppProps, AppState> {
     return (
       <div>
         {/*<WithInputParameters />*/}
+        {/*<Forms />*/}
         <Forms />
       </div>
     );

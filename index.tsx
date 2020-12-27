@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 import WithInputParameters from "./components/WithInputParameters";
 import Forms from "./components/Forms";
+import ConditionalRendering from "./components/ConditionalRendering";
 import "./style.css";
 
 interface AppProps {}
@@ -22,7 +23,7 @@ class App extends Component<AppProps, AppState> {
       <div>
         {/*<WithInputParameters />*/}
         {/*<Forms />*/}
-        <Forms />
+        <ConditionalRendering />
       </div>
     );
   }

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { render } from "react-dom";
 import {
   Route,
@@ -10,6 +10,7 @@ import WithInputParameters from "./components/WithInputParameters";
 import Forms from "./components/Forms";
 import ConditionalRendering from "./components/ConditionalRendering";
 import Lists from "./components/Lists";
+import Redux from "./components/redux/Redux";
 import "./style.css";
 
 const NotFound = () => <h1>Not Found </h1>;
@@ -42,6 +43,11 @@ const routing = (
           Lists
         </NavLink>
       </li>
+      <li>
+        <NavLink to="/redux" exact activeStyle={{ color: "red" }}>
+          Redux
+        </NavLink>
+      </li>
     </ul>
     <hr />
     {/*<Route exact path="/" component={Lists} />
@@ -51,11 +57,12 @@ const routing = (
     <Route path="/lists" component={Lists} />
     <Route component={NotFound} />*/}
     <Switch>
-      <Route exact path="/" component={Lists} />
+      <Route exact path="/" component={Redux} />
       <Route path="/wip" component={WithInputParameters} />
       <Route path="/forms" component={Forms} />
       <Route path="/cr" component={ConditionalRendering} />
       <Route path="/lists" component={Lists} />
+      <Route path="/redux" component={Redux} />
       <Route component={NotFound} />
     </Switch>
   </Router>

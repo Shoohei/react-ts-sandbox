@@ -9,7 +9,7 @@ import TodoList from "./components/TodoList.js";
 
 class App extends LifeCycleComponent {
   render() {
-    const { dispath, visibleTodos } = this.props;
+    const { dispatch, visibleTodos } = this.props;
 
     return (
       <React.Fragment>

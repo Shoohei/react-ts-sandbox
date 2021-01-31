@@ -1,34 +1,20 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
+import { Route, BrowserRouter as Router } from "react-router-dom";
 import WithInputParameters from "./components/WithInputParameters";
 import Forms from "./components/Forms";
 import ConditionalRendering from "./components/ConditionalRendering";
 import Lists from "./components/Lists";
 import "./style.css";
 
-interface AppProps {}
-interface AppState {
-  name: string;
-}
+const routing = (
+  <Router>
+    <Route exact path="/" component={Lists} />
+    <Route path="/wip" component={WithInputParameters} />
+    <Route path="/forms" component={Forms} />
+    <Route path="/cr" component={ConditionalRendering} />
+    <Route path="/lists" component={Lists} />
+  </Router>
+);
 
-class App extends Component<AppProps, AppState> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: "React"
-    };
-  }
-
-  render() {
-    return (
-      <React.Fragment>
-        {/*<WithInputParameters />*/}
-        {/*<Forms />*/}
-        {/*<ConditionalRendering />*/}
-        <Lists />
-      </React.Fragment>
-    );
-  }
-}
-
-render(<App />, document.getElementById("root"));
+render(routing, document.getElementById("root"));

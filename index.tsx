@@ -44,6 +44,12 @@ const routing = (
       </li>
     </ul>
     <hr />
+    {/*<Route exact path="/" component={Lists} />
+    <Route path="/wip" component={WithInputParameters} />
+    <Route path="/forms" component={Forms} />
+    <Route path="/cr" component={ConditionalRendering} />
+    <Route path="/lists" component={Lists} />
+    <Route component={NotFound} />*/}
     <Switch>
       <Route exact path="/" component={Lists} />
       <Route path="/wip" component={WithInputParameters} />

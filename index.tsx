@@ -11,20 +11,22 @@ const routing = (
   <Router>
     <ul className="examples">
       <li>
-        <NavLink to="/wip">WithInputParameters</NavLink>
+        <NavLink to="/wip" exact activeStyle={{ color: "red" }}>
+          WithInputParameters
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/forms">Forms</NavLink>
+        <NavLink to="/forms" exact activeStyle={{ color: "red" }}>Forms</NavLink>
       </li>
       <li>
-        <NavLink to="/cr">ConditionalRendering</NavLink>
+        <NavLink to="/cr" exact activeStyle={{ color: "red" }}>ConditionalRendering</NavLink>
       </li>
       <li>
-        <NavLink to="/lists">Lists</NavLink>
+        <NavLink to="/lists" exact activeStyle={{ color: "red" }}>Lists</NavLink>
       </li>
     </ul>
     <hr />
-    <Route path="/" component={Lists} />
+    <Route exact path="/" component={Lists} />
     <Route path="/wip" component={WithInputParameters} />
     <Route path="/forms" component={Forms} />
     <Route path="/cr" component={ConditionalRendering} />

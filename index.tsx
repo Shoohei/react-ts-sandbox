@@ -3,6 +3,7 @@ import { render } from "react-dom";
 import WithInputParameters from "./components/WithInputParameters";
 import Forms from "./components/Forms";
 import ConditionalRendering from "./components/ConditionalRendering";
+import Lists from "./components/Lists";
 import "./style.css";
 
 interface AppProps {}
@@ -20,11 +21,12 @@ class App extends Component<AppProps, AppState> {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         {/*<WithInputParameters />*/}
         {/*<Forms />*/}
-        <ConditionalRendering />
-      </div>
+        {/*<ConditionalRendering />*/}
+        <Lists />
+      </React.Fragment>
     );
   }
 }

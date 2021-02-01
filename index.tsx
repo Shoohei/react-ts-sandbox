@@ -49,6 +49,11 @@ const routing = (
           Redux
         </NavLink>
       </li>
+      <li>
+        <NavLink to="/redux2" exact activeStyle={{ color: "red" }}>
+          Redux2
+        </NavLink>
+      </li>
     </ul>
     <hr />
     {/*<Route exact path="/" component={Lists} />

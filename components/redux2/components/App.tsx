@@ -3,7 +3,7 @@ import LifeCycleComponent from "../../../utilities/LifeCycleComponent";
 
 import AddTodo from "../containers/AddTodo";
 import VisibleTodoList from "../containers/VisibleTodoList";
-import Footer from "../Footer";
+import Footer from "./Footer";
 
 class Redux2 extends LifeCycleComponent {
   constructor(props) {

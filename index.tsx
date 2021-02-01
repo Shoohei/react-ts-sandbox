@@ -11,6 +11,7 @@ import Forms from "./components/Forms";
 import ConditionalRendering from "./components/ConditionalRendering";
 import Lists from "./components/Lists";
 import Redux from "./components/redux/Redux";
+import Redux2 from "./components/redux2/components/App";
 import "./style.css";
 
 const NotFound = () => <h1>Not Found </h1>;
@@ -57,12 +58,13 @@ const routing = (
     <Route path="/lists" component={Lists} />
     <Route component={NotFound} />*/}
     <Switch>
-      <Route exact path="/" component={Redux} />
+      <Route exact path="/" component={Redux2} />
       <Route path="/wip" component={WithInputParameters} />
       <Route path="/forms" component={Forms} />
       <Route path="/cr" component={ConditionalRendering} />
       <Route path="/lists" component={Lists} />
       <Route path="/redux" component={Redux} />
+      <Route path="/redux2" component={Redux2} />
       <Route component={NotFound} />
     </Switch>
   </Router>

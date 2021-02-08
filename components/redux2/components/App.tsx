@@ -11,11 +11,11 @@ class Redux2 extends LifeCycleComponent {
   }
   render() {
     return (
-      <React.Fragment>
+      <div>
         <AddTodo />
         <VisibleTodoList />
         <Footer />
-      </React.Fragment>
+      </div>
     );
   }
 }

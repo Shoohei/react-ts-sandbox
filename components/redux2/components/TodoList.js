@@ -3,28 +3,23 @@ import PropTypes from "prop-types";
 import Todo from "./Todo";
 import { toggleTodo } from "../actions";
 
-const TodoList = ({ todos, onTodoClick }) => {
+const TodoList = ({ todos, toggleTodo }) => {
   console.log("TodoList.js -> ", todos, toggleTodo);
-  if (todos.length) {
-    console.log("TodoList.js -> if (todos)", todos, onTodoClick);
-    return (
-      <ul>
-        {todos.map((todo, index) => (
-          <Todo
-            key={index}
-            {...todo}
-            onClick={() => {
-              console.log("TodoList.js -> Todo.onClick", todo, index);
-              toggleTodo(index);
-            }}
-          />
-        ))}
-      </ul>
-    );
-  } else {
-    console.log("TodoList.js -> else");
-    return <p>No item</p>;
-  }
+  console.log("TodoList.js -> if (todos)", todos, toggleTodo);
+  return (
+    <ul>
+      {todos.map((todo, index) => (
+        <Todo
+          key={index}
+          {...todo}
+          onClick={() => {
+            console.log("TodoList.js -> Todo.onClick", todo, todo.id);
+            toggleTodo(todo.id);
+          }}
+        />
+      ))}
+    </ul>
+  );
 };
 
 TodoList.propTypes = {

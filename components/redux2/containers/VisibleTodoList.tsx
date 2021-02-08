@@ -3,6 +3,7 @@ import { toggleTodo, VisibilityFilters } from "../actions";
 import TodoList from "../components/TodoList";
 
 const getVisibleTodos = (todos, filter) => {
+  // return todos;
   switch (filter) {
     case VisibilityFilters.SHOW_ALL:
       return todos;

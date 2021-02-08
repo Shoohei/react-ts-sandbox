@@ -11,7 +11,7 @@ import Forms from "./components/Forms";
 import ConditionalRendering from "./components/ConditionalRendering";
 import Lists from "./components/Lists";
 import Redux from "./components/redux/Redux";
-import Redux2 from "./components/redux2/components/App";
+import Redux2 from "./components/redux2/Redux2";
 import "./style.css";
 
 const NotFound = () => <h1>Not Found </h1>;

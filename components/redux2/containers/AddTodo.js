@@ -10,7 +10,7 @@ class AddTodo extends LifeCycleComponent {
   }
   render() {
     return (
-      <Provider>
+      <div>
         <form
           onSubmit={e => {
             e.preventDefault();
@@ -24,7 +24,7 @@ class AddTodo extends LifeCycleComponent {
           <input ref={node => (input = node)} />
           <button type="submit">Add AddTodo</button>
         </form>
-      </Provider>
+      </div>
     );
   }
 }

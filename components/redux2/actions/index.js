@@ -10,9 +10,14 @@ export const addTodo = text => {
   return result;
 };
 
-export const setVisibilityFilter = filter => ({
-  type: "SET_VISIBILITY_FILTER"
-});
+export const setVisibilityFilter = filter => {
+  const result = {
+    type: "SET_VISIBILITY_FILTER",
+    filter
+  };
+  console.log("actions.js -> addTodo -> ", result);
+  return result;
+};
 
 export const toggleTodo = id => ({
   type: "TOGGLE_TODO",

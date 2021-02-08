@@ -5,10 +5,10 @@ import { render } from "react-dom";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 
-import App from "./components/App";
+import App from "./App";
 import todoApp from "./reducers";
 
-class Redux extends LifeCycleComponent {
+class Redux2 extends LifeCycleComponent {
   render() {
     let store = createStore(todoApp);
     return (
@@ -18,4 +18,4 @@ class Redux extends LifeCycleComponent {
     );
   }
 }
-export default Redux;
+export default Redux2;

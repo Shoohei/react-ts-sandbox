@@ -1,14 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Todo from "./Todo";
+import { toggleTodo } from "../actions";
 
 const TodoList = ({ todos, onTodoClick }) => {
-  if (todos) {
-    console.log("TodoList.js -> if (todos)");
+  console.log("TodoList.js -> ", todos, toggleTodo);
+  if (todos.length) {
+    console.log("TodoList.js -> if (todos)", todos, onTodoClick);
     return (
       <ul>
         {todos.map((todo, index) => (
-          <Todo key={index} {...todo} onClick={() => onTodoClick(index)} />
+          <Todo
+            key={index}
+            {...todo}
+            onClick={() => {
+              console.log("TodoList.js -> Todo.onClick", todo, index);
+              toggleTodo(index);
+            }}
+          />
         ))}
       </ul>
     );
@@ -25,8 +34,8 @@ TodoList.propTypes = {
       completed: PropTypes.bool.isRequired,
       text: PropTypes.string.isRequired
     }).isRequired
-  ),
-  onTodoClick: PropTypes.func
+  ).isRequired,
+  toggleTodo: PropTypes.func.isRequired
 };
 
 export default TodoList;

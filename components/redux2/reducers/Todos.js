@@ -1,8 +1,8 @@
-const rTodos = (state = [], action) => {
+const todos = (state = [], action) => {
+  let result;
   switch (action.type) {
     case "ADD_TODO":
-      console.log("Todo.js -> ADD_TODO");
-      return [
+      result = [
         ...state,
         {
           id: action.id,
@@ -10,14 +10,17 @@ const rTodos = (state = [], action) => {
           completed: false
         }
       ];
+      console.log("Todo.js -> ADD_TODO", result);
+      return result;
     case "TOGGLE_TODO":
-      console.log("Todo.js -> TOGGLE_TODO");
-      return state.map(todo =>
+      result = state.map(todo =>
         todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
       );
+      console.log("Todo.js -> TOGGLE_TODO", result);
+      return result;
     default:
       console.log("Todo.js -> default");
       return state;
   }
 };
-export default rTodos;
+export default todos;

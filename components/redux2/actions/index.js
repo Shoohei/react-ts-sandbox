@@ -6,7 +6,7 @@ export const addTodo = text => {
     id: nextTodoId++,
     text
   };
-  console.log("actions.js -> addTodo -> ", result);
+  console.log("actions -> addTodo -> ", result);
   return result;
 };
 
@@ -15,14 +15,18 @@ export const setVisibilityFilter = filter => {
     type: "SET_VISIBILITY_FILTER",
     filter
   };
-  console.log("actions.js -> addTodo -> ", result);
+  console.log("actions -> addTodo -> ", result);
   return result;
 };
 
-export const toggleTodo = id => ({
-  type: "TOGGLE_TODO",
-  id
-});
+export const toggleTodo = id => {
+  const result = {
+    type: "TOGGLE_TODO",
+    id
+  };
+  console.log("actions -> toggleTodo -> ", result);
+  return result;
+};
 
 export const VisibilityFilters = {
   SHOW_ALL: "SHOW_ALL",

@@ -1,16 +1,18 @@
 import React from "react";
-import LifeCycleComponent from "../../utilities/LifeCycleComponent";
 
 import AddTodo from "./containers/AddTodo";
 import VisibleTodoList from "./containers/VisibleTodoList";
 import Footer from "./components/Footer";
 
-const App = () => (
-  <div>
-    <AddTodo />
-    <VisibleTodoList />
-    <Footer />
-  </div>
-);
+const App = () => {
+  console.log("App.js");
+  return (
+    <div>
+      <AddTodo />
+      <VisibleTodoList />
+      <Footer />
+    </div>
+  );
+};
 
 export default App;

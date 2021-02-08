@@ -10,7 +10,9 @@ import todoApp from "./reducers";
 
 class Redux2 extends LifeCycleComponent {
   render() {
+    console.log("Redux2 -> Before createStore");
     let store = createStore(todoApp);
+    console.log("Redux2 -> After createStore");
     return (
       <Provider store={store}>
         <App />

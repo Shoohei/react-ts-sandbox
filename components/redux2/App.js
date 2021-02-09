@@ -7,11 +7,11 @@ import Footer from "./components/Footer";
 const App = () => {
   console.log("App.js");
   return (
-    <div>
+    <React.Fragment>
       <AddTodo />
       <VisibleTodoList />
       <Footer />
-    </div>
+    </React.Fragment>
   );
 };
 

@@ -7,7 +7,7 @@ import Button from "@material-ui/core/Button";
 const AddTodo = ({ dispatch }) => {
   let input;
   return (
-    <div>
+    <React.Fragment>
       <form
         onSubmit={e => {
           e.preventDefault();
@@ -25,7 +25,7 @@ const AddTodo = ({ dispatch }) => {
           Add Todo
         </Button>
       </form>
-    </div>
+    </React.Fragment>
   );
 };
 

@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 import AddTodo from "./containers/AddTodo";
 import VisibleTodoList from "./containers/VisibleTodoList";
 import Footer from "./components/Footer";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import Switch from "@material-ui/core/Switch";
 
 import { CssBaseline } from "@material-ui/core";
 import blueGrey from "@material-ui/core/colors/blueGrey";
@@ -11,27 +13,23 @@ import Reset from "@material-ui/core/CssBaseline";
 
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
-const theme = createMuiTheme({
-  palette: {
-    type: "dark",
-    primary: {
-      light: lightGreen[300],
-      main: lightGreen[500],
-      dark: lightGreen[700]
-    },
-    secondary: {
-      light: blueGrey[300],
-      main: blueGrey[500],
-      dark: blueGrey[700]
-    }
-  }
-});
-
 const App = () => {
+  const [paletteTypeState, setPaletteTypeState] = useState(false);
+  const paletteType = paletteTypeState ? "dark" : "light";
+  const theme = createMuiTheme({
+    palette: {
+      type: paletteType
+    }
+  });
+  const handleThemeChange = () => {
+    setPaletteTypeState(!paletteTypeState);
+  };
+
   console.log("App.js");
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <Switch checked={paletteTypeState} onChange={handleThemeChange} />
       <AddTodo />
       <VisibleTodoList />
       <Footer />

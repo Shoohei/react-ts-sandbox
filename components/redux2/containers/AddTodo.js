@@ -24,6 +24,9 @@ const AddTodo = ({ dispatch }) => {
         <Button size="small" variant="contained" color="primary" type="submit">
           Add Todo
         </Button>
+        <Button size="small" variant="contained" color="primary" type="submit">
+          Add Todo
+        </Button>
       </form>
     </React.Fragment>
   );

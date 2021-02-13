@@ -22,11 +22,6 @@ const theme = createMuiTheme({
     text: {
       primary: grey[300],
       secondary: grey[500]
-    },
-    neutral: {
-      main: purple[500],
-      light: purple[300],
-      dark: purple[700]
     }
   }
 });

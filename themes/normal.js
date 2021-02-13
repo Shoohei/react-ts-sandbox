@@ -16,10 +16,8 @@ const theme = createMuiTheme({
     secondary: {
       main: teal[500]
     },
-    neutral: {
-      main: purple[500],
-      light: purple[300],
-      dark: purple[700]
+    myCustomColor: {
+      main: "#f00c93"
     }
   }
 });

@@ -17,8 +17,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: "center"
   },
   button: {
-    align: "center",
-    color: theme.palette.primary.dark
+    align: "center"
   }
 }));
 

@@ -32,7 +32,7 @@ const App = () => {
       <IconButton
         type="submit"
         style={{ float: "right" }}
-        color="neutral"
+        color="myCustomColor"
         onClick={handleThemeChange}
       >
         <Icon className="fas fa-adjust" />

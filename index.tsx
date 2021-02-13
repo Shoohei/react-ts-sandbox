@@ -10,6 +10,7 @@ import WithInputParameters from "./components/WithInputParameters";
 import Forms from "./components/Forms";
 import ConditionalRendering from "./components/ConditionalRendering";
 import Lists from "./components/Lists";
+import ResponsiveDrawer from "./components/ResponsiveDrawer";
 import Redux from "./components/redux/Redux";
 import Redux2 from "./components/redux2/Redux2";
 import "./style.css";
@@ -54,6 +55,11 @@ const routing = (
           Redux2
         </NavLink>
       </li>
+      <li>
+        <NavLink to="/drawer" exact activeStyle={{ color: "red" }}>
+          Drawer
+        </NavLink>
+      </li>
     </ul>
     <hr />
     {/*<Route exact path="/" component={Lists} />
@@ -70,6 +76,7 @@ const routing = (
       <Route path="/lists" component={Lists} />
       <Route path="/redux" component={Redux} />
       <Route path="/redux2" component={Redux2} />
+      <Route path="/drawer" component={ResponsiveDrawer} />
       <Route component={NotFound} />
     </Switch>
   </Router>

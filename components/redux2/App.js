@@ -7,8 +7,8 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Switch from "@material-ui/core/Switch";
 
 import { CssBaseline } from "@material-ui/core";
-import blueGrey from "@material-ui/core/colors/blueGrey";
-import lightGreen from "@material-ui/core/colors/lightGreen";
+import purple from "@material-ui/core/colors/purple";
+import teal from "@material-ui/core/colors/teal";
 import Reset from "@material-ui/core/CssBaseline";
 
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
@@ -18,7 +18,13 @@ const App = () => {
   const paletteType = paletteTypeState ? "dark" : "light";
   const theme = createMuiTheme({
     palette: {
-      type: paletteType
+      type: paletteType,
+      primary: {
+        main: purple[500]
+      },
+      secondary: {
+        main: teal[500]
+      }
     }
   });
   const handleThemeChange = () => {

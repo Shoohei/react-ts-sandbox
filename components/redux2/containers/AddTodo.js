@@ -1,31 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { connect } from "react-redux";
 import { addTodo } from "../actions";
 import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles(theme => ({
+  task: {
+    flexDirection: "column",
+    alignItems: "center"
+  },
+  button: {
+    margin: theme.spacing(1)
+  }
+}));
 
 const AddTodo = ({ dispatch }) => {
-  let input;
+  const handleSubmit = event => {
+    event.preventDefault();
+    if (!task.trim()) {
+      console.log("AddTodo.js -> if (!task.trim())");
+      return;
+    }
+    console.log("dispatch: " + task);
+    dispatch(addTodo(task));
+    setTask("");
+  };
+  const [task, setTask] = useState("");
+
+  const classes = useStyles();
   return (
-    <React.Fragment>
-      <form
-        onSubmit={e => {
-          e.preventDefault();
-          if (!input.value.trim()) {
-            console.log("AddTodo.js -> if (!input.value.trim())");
-            return;
-          }
-          console.log("dispatch: " + input.value);
-          dispatch(addTodo(input.value));
-          input.value = "";
-        }}
+    <form onSubmit={handleSubmit}>
+      <TextField
+        className={classes.task}
+        name="task"
+        label="Task"
+        variant="filled"
+        value={task}
+        onInput={e => setTask(e.target.value)}
+      />
+      <Button
+        className={classes.button}
+        variant="contained"
+        color="primary"
+        type="submit"
       >
-        <input ref={node => (input = node)} />
-        <Button size="small" variant="contained" color="primary" type="submit">
-          Add Todo
-        </Button>
-      </form>
-    </React.Fragment>
+        Add Todo
+      </Button>
+    </form>
   );
 };
 

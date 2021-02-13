@@ -16,6 +16,8 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 const App = () => {
   const [paletteTypeState, setPaletteTypeState] = useState(false);
   const paletteType = paletteTypeState ? "dark" : "light";
+  const primaryMain = paletteTypeState ? purple[200] : purple[500];
+  const secondaryMain = paletteTypeState ? teal[200] : teal[500];
   const theme = createMuiTheme({
     palette: {
       type: paletteType,

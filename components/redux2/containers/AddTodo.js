@@ -5,6 +5,7 @@ import { addTodo } from "../actions";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
+import { Icon } from "@material-ui/icons";
 
 const useStyles = makeStyles(theme => ({
   task: {
@@ -40,13 +41,14 @@ const AddTodo = ({ dispatch }) => {
         value={task}
         onInput={e => setTask(e.target.value)}
       />
+      <Icon color="primary">add_circle</Icon>
       <Button
         className={classes.button}
         variant="contained"
         color="primary"
         type="submit"
       >
-        Add Todo
+        Add
       </Button>
     </form>
   );

@@ -17,7 +17,9 @@ const theme = createMuiTheme({
       main: teal[500]
     },
     myCustomColor: {
-      main: "#f00c93"
+      main: purple[500],
+      light: purple[300],
+      dark: purple[700]
     }
   }
 });

@@ -33,10 +33,7 @@ const AddTodo = ({ dispatch }) => {
     setTask("");
   };
   const [task, setTask] = useState("");
-  this.focusTextInput = () => {
-    // Focus the text input using the raw DOM API
-    if (this.task) this.task.focus();
-  };
+
   const classes = useStyles();
   React.useEffect(() => {
     const node = loadCSS(

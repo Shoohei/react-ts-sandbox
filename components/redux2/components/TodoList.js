@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Todo from "./Todo";
-import { toggleTodo } from "../actions";
 
 const TodoList = ({ todos, toggleTodo }) => {
   console.log("TodoList.js -> ", todos, toggleTodo);

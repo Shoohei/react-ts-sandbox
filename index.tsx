@@ -16,14 +16,7 @@ import Redux2 from "./components/redux2/Redux2";
 import "./style.css";
 
 const NotFound = () => <h1>Not Found </h1>;
-declare module "@material-ui/core/styles/createPalette" {
-  interface Palette {
-    neutral: Palette["primary"];
-  }
-  interface PaletteOptions {
-    neutral: PaletteOptions["primary"];
-  }
-}
+
 const routing = (
   <Router>
     <ul className="examples">

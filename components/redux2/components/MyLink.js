@@ -6,7 +6,7 @@ const MyLink = ({ active, children, onLinkClicked }) => {
   return (
     <Link
       align="center"
-      color={active ? "secondary" : ""}
+      color={active ? "secondary" : "textPrimary"}
       variant="body1"
       style={{ cursor: "pointer" }}
       onClick={onLinkClicked}

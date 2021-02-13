@@ -1,29 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Link from "@material-ui/core/Link";
+import Topography from "@material-ui/core/Topography";
 
-const Link = ({ active, children, onClick }) => {
+const MyLink = ({ active, children, onClick }) => {
   if (active) {
-    return <span>{children}</span>;
+    return <Topography>{children}</Topography>;
   }
 
   return (
-    <a
-      href=""
-      onClick={e => {
-        e.preventDefault();
-        onClick();
-      }}
-    >
+    <Link component="button" variant="body2" onClick={onClick}>
       {children}
-    </a>
+    </Link>
   );
 };
 
-Link.propTypes = {
+MyLink.propTypes = {
   active: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func.isRequired
 };
 
-export default Link;
+export default MyLink;
